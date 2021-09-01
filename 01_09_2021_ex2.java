@@ -2,36 +2,41 @@ package exCondicionais;
 
 import java.util.Scanner;
 
-public class ex2_01_09_2021 {
+public class ex4 {
 
 	public static void main(String[] args) {
 		
+	double n1, n2, n3;
+		
 	Scanner leia = new Scanner(System.in);
-	
-	
-	double infantil, juvenil, adulto, idade;
-	
-	System.out.println("Digite a sua idade atual: ");
-	idade = leia.nextDouble();
-	
-	
-	
-	System.out.println("Você se encontra na categoria: ");
-	
-	if(idade > 18 && idade <= 25) {
-		System.out.println("Adulto(a).");
+		
+	System.out.println("Digite o primeiro número: ");
+		n1 = leia.nextDouble();
+		
+	System.out.println("Digite o segundo número: ");
+		n2 = leia.nextDouble();
+		
+	System.out.println("Digite o terceiro número: ");
+		n3 = leia.nextDouble();
+		
+	if (n1 < n2 && n2 < n3) {
+		System.out.println("A ordem é: " + n1+ ", " + n2+ ", " + n3);
+		}
+	else if (n2 < n3 && n3 < n1) {
+		System.out.println("A ordem é: " + n2+ ", " + n3+ ", " + n1);
+		}
+	else if (n1 < n3 && n3 < n2) {
+		System.out.println("A ordem é: " + n1+ ", " + n3+ ", " + n2);
+		}
+	else if (n1 < n2 && n2 < n3) {
+		System.out.println("A ordem é: " + n1+ ", " + n2+ ", " + n3);
+		}
+	else if (n3 < n2 && n2 < n1) {
+		System.out.println("A ordem é: " + n3+ ", " + n2+ ", " + n1);
+		}
+	else if (n3 < n1 && n1 < n2) {
+		System.out.println("A ordem é: " + n3 + ", " + n1 + ", " + n2);
+		}
 	}
-	else if (idade >= 10 && idade < 15) {
-		System.out.println("Infantil");
-	}
-	else if (idade >= 15 && idade < 18) {
-		System.out.println("Juvenil.");
-	}
-	else if (idade > 30.0) {
-		System.out.println("Adulto(a).");
-	}
-	leia.close();
-	
-	}
+
 }
-	
